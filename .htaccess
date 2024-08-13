@@ -1,0 +1,167 @@
+<Files ~ "^.*\.([Ee][Nn][Vv])">
+ order allow,deny
+ deny from all
+ satisfy all
+</Files>
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+
+
+
+Redirect 301 /2015/07/11/video-post/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /2015/08/01/quote-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/08/06/grid-gallery-post-with-overlay/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/08/08/sticky-standard-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/08/25/link-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/09/01/audio-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/09/03/image-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/09/08/standard-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/09/22/carousel-gallery-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2015/10/18/grid-gallery-post/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2023/01/07/hello-world/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /2023/01/25/electroencephalography/index.htm http://www.drvishalchafale.com/blogs/electroencephalography
+Redirect 301 /2023/01/25/epilepsy/index.htm https://drvishalchafale.com/epilepsy
+Redirect 301 /2023/01/25/headache/index.htm https://drvishalchafale.com/headaches
+Redirect 301 /2023/01/25/interventional-neurology/index.htm http://www.drvishalchafale.com/blogs/interventional-neurology
+Redirect 301 /2023/01/25/nerve-conduction-studies/index.htm http://www.drvishalchafale.com/blogs/nerve-conduction
+Redirect 301 /2023/01/25/neuromuscular-disorders/index.htm http://www.drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /2023/01/25/parkinsonism/index.htm http://www.drvishalchafale.com/blogs/parkinsonism
+Redirect 301 /2023/01/25/stroke/index.htm https://drvishalchafale.com/blogs/stroke
+Redirect 301 /2023/01/25/vertigo-giddiness/index.htm http://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /about-me/index.htm https://drvishalchafale.com/About-Doctor
+Redirect 301 /author/admin/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /author/drvishalneuron_ss/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /author/drvishalneuron_ss/page/2/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /blogs/nerve-conduction-blog https://drvishalchafale.com/blogs/nerve-conduction
+Redirect 301 /blogs/neuromuscular-disorders-blog https://drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /blogs/parkinsonism-blog https://drvishalchafale.com/blogs/parkinsonism
+
+Redirect 301 /category/audio/index.htm http://www.drvishalchafale.com/blogs
+Redirect 301 /category/electroencephalography/index.htm https://drvishalchafale.com/blogs/electroencephalography
+Redirect 301 /category/gallery/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /category/headache/index.htm https://drvishalchafale.com/headaches
+Redirect 301 /category/image/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /category/interventional-neurology/index.htm https://drvishalchafale.com/blogs/interventional-neurology
+Redirect 301 /category/nerve-conduction-study/index.htm https://drvishalchafale.com/blogs/nerve-conduction
+Redirect 301 /category/neurology/index.htm https://drvishalchafale.com/blogs/interventional-neurology
+Redirect 301 /category/parkinsonism/index.htm https://drvishalchafale.com/parkinsons-disease
+Redirect 301 /category/stroke/index.htm https://drvishalchafale.com/Brain-Stroke
+Redirect 301 /category/uncategorized/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /category/vep-baep-testing/index.htm https://drvishalchafale.com/blogs/visual-evoked-potential-testing
+Redirect 301 /category/vertigo-giddiness/index.htm https://drvishalchafale.com/vertigo
+Redirect 301 /category/video/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /contact-us/index.htm https://drvishalchafale.com/contact
+Redirect 301 /facilities/index.htm https://drvishalchafale.com/contact
+Redirect 301 /gallery/index.htm https://drvishalchafale.com/case-study
+Redirect 301 /index.htm https://drvishalchafale.com/
+Redirect 301 /pages/news/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /pages/news/page/2/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /pages/news/page/3/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /publications/index.htm https://drvishalchafale.com/About-Doctor
+Redirect 301 /tag/acute-ischemic-stroke/index.htm https://drvishalchafale.com/Brain-Stroke
+Redirect 301 /tag/alcohol/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/aneurysms/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/arterities/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/audio/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/baep/index.htm https://drvishalchafale.com/blogs/visual-evoked-potential-testing
+Redirect 301 /tag/brain-attack/index.htm http://www.drvishalchafale.com/blogs/stroke
+Redirect 301 /tag/brain/index.htm http://www.drvishalchafale.com/blogs/headache
+Redirect 301 /tag/brainstem/index.htm https://drvishalchafale.com/blogs/visual-evoked-potential-testing
+Redirect 301 /tag/breathing/index.htm http://www.drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /tag/cardiac-arrhythmias/index.htm http://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/clinic/index.htm http://www.drvishalchafale.com/blogs/epilepsy
+Redirect 301 /tag/coma-and-brain-death/index.htm http://www.drvishalchafale.com/blogs/electroencephalography
+Redirect 301 /tag/consectetuer/index.htm https://www.drvishalchafale.com/blogs
+Redirect 301 /tag/cvt/index.htm https://www.drvishalchafale.com/blogs/interventional-neurology
+Redirect 301 /tag/dementia/index.htm https://drvishalchafale.com/dementia
+Redirect 301 /tag/diabetes/index.htm https://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/diagnosis/index.htm https://www.drvishalchafale.com/blogs/epilepsy
+Redirect 301 /tag/double-vision/index.htm https://www.drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /tag/drug-induced/index.htm https://www.drvishalchafale.com/blogs/parkinsonism
+Redirect 301 /tag/drug-toxicity/index.htm https://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/duopa/index.htm https://www.drvishalchafale.com/blogs/parkinsonism
+Redirect 301 /tag/eating-disorders/index.htm https://www.drvishalchafale.com/blogs/electroencephalography
+Redirect 301 /tag/electroencephalography/index.htm https://www.drvishalchafale.com/blogs/electroencephalography
+Redirect 301 /tag/emg/index.htm https://www.drvishalchafale.com/blogs/parkinsonism
+Redirect 301 /tag/endovascular/index.htm https://www.drvishalchafale.com/blogs/interventional-neurology
+Redirect 301 /tag/epilepsy/index.htm https://drvishalchafale.com/epilepsy
+Redirect 301 /tag/gallery/index.htm https://www.drvishalchafale.com/blogs
+Redirect 301 /tag/grid/index.htm https://www.drvishalchafale.com/blogs
+Redirect 301 /tag/headache/index.htm https://drvishalchafale.com/headaches
+Redirect 301 /tag/hyperventilation-syndrome/index.htm https://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/hypoglycemia/index.htm https://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/image/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/interventional-neurology/index.htm https://drvishalchafale.com/Brain-Stroke
+Redirect 301 /tag/ipsum/index.htm https://www.drvishalchafale.com/blogs/interventional-neurology
+Redirect 301 /tag/ischemic-attack/index.htm https://www.drvishalchafale.com/blogs/stroke
+Redirect 301 /tag/link/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/loram/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/movement-issues/index.htm https://www.drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /tag/ncs/index.htm https://www.drvishalchafale.com/blogs/nerve-conduction
+Redirect 301 /tag/ncv/index.htm https://www.drvishalchafale.com/blogs/nerve-conduction
+Redirect 301 /tag/nerve-conduction-study/index.htm https://www.drvishalchafale.com/blogs/nerve-conduction
+Redirect 301 /tag/nerve/index.htm https://www.drvishalchafale.com/blogs/nerve-conduction
+Redirect 301 /tag/neuro-muscular-disorders/index.htm https://www.drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /tag/neuro/index.htm https://www.drvishalchafale.com/blogs/headache
+Redirect 301 /tag/neurology/index.htm https://www.drvishalchafale.com/blogs/electroencephalography
+Redirect 301 /tag/nonummy/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/numbness/index.htm https://www.drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /tag/orthostatic-hypotension/index.htm https://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/panic/index.htm https://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/parkinsonism/index.htm https://drvishalchafale.com/parkinsons-disease
+Redirect 301 /tag/quote/index.htm https://drvishalchafale.com/blogs
+Redirect 301 /tag/simple-coiling/index.htm https://drvishalchafale.com/blogs/interventional-neurology
+Redirect 301 /tag/sinemet/index.htm https://www.drvishalchafale.com/blogs/parkinsonism
+Redirect 301 /tag/sleep-disorders/index.htm https://drvishalchafale.com/sleep-disorder
+Redirect 301 /tag/stalevo/index.htm https://www.drvishalchafale.com/blogs/parkinsonism
+Redirect 301 /tag/stroke/index.htm https://drvishalchafale.com/Brain-Stroke
+Redirect 301 /tag/treatment/index.htm https://www.drvishalchafale.com/blogs/parkinsonism
+Redirect 301 /tag/tumors/index.htm https://www.drvishalchafale.com/blogs/headache
+Redirect 301 /tag/uremia/index.htm https://www.drvishalchafale.com/blogs/vertigo-giddiness
+Redirect 301 /tag/vep/index.htm https://www.drvishalchafale.com/blogs/visual-evoked-potential-testing
+Redirect 301 /tag/video/index.htm https://www.drvishalchafale.com/blogs
+Redirect 301 /tag/vision-issues/index.htm https://www.drvishalchafale.com/blogs/neuromuscular-disorders
+Redirect 301 /tag/visual-evoked/index.htm https://www.drvishalchafale.com/blogs/visual-evoked-potential-testing
+Redirect 301 /testimonials/index.htm https://drvishalchafale.com/patient-testimonial
+Redirect 301 /category/vertigo-giddiness/index.htm https://drvishalchafale.com/vertigo
+Redirect 301 /video-gallery/index.htm https://drvishalchafale.com/patient-education
+
+
+Redirect 301 /procedure https://drvishalchafale.com/services
+
+Redirect 301 /blogs/epilepsy https://drvishalchafale.com/blogs/epilepsy-treatment
+
+
+Redirect 301 /tag/dementia https://drvishalchafale.com/dementia
+Redirect 301 /tag/neuro-muscular-disorders https://www.drvishalchafale.com/blogs/neuromuscular-disorders
+
+
+
+
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
